@@ -1,0 +1,51 @@
+h5{
+    text-align: center;
+    font-size: large;
+}
+h4{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+form{
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin-top: 16px;
+  }
+
+label{
+    display: flex;
+    // margin:0,0,0,11em;
+    // margin-left: 20px;
+    // margin-top: 20px;
+    
+}
+// .sample{
+//     display:flex;
+//     flex-direction:row;
+//     //margin-left: 20px;  
+// }
+// card-wrapper{
+//     margin-left: 20px; 
+//     margin: 0,0,0em;
+// }
+// form-check-label{
+//     gap:32px;
+// }
+// input#inlineCheckbox1.form-check-input{
+//     margin-left: 20px;
+// }
+// div.form-check form-check-inline{
+//     display:-webkit-box;  
+// }
+// form-check-label{
+//     display: -webkit-box;
+// }

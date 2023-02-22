@@ -1,0 +1,1416 @@
+
+<div class="modal">
+    <div class="content">
+        <h5> Customer Feedback </h5>
+        <div class="card-container">
+            <form [formGroup]="customer_feedback" (ngSubmit)="onSubmit()">
+                <h4> CLEARANCE FORM (No Dues)</h4>
+                <p>Note: Any information or signature on this form does not approve or authenticate formal release of the <br>
+                    employee from the services of the company and hence cannot be construed as a formal relieving note . 
+                </p>
+                <div class="customerForm">
+                <div class="form-1">
+                  
+                    <label for="emp_id">Employee Id: </label>
+                    <input id="emp_id" type="text" formControlName="emp_id" />
+                    <label for="name">Name: </label>
+                    <input id="name"  class="p-2 bg-light border" type="text" formControlName="name" />
+                </div>
+                <div class="form-1">
+                    <label for="designation">Designation: </label>
+                    <input id="designation" type="text" formControlName="designation" />
+                    <label for="dept">Department: </label>
+                    <input id="dept" type="text" formControlName="dept" />
+                </div>
+                <div class="form-1">
+                    <label for="doj">DOJ: </label>
+                    <input id="doj" type="text" formControlName="doj" />
+                    <label for="dor">Date Of Resign: </label>
+                    <input id="dor" type="text" formControlName="dor" />
+                    <label for="lwd">Last Working Day: </label>
+                    <input id="lwd" type="text" formControlName="ldw" />
+                </div>
+                <div class="form-1">
+                    <label for="address">Address:</label>
+                    <input id="address" type="text" formControlName="address" />
+                </div>
+                <div class="form-1">
+                    <label for="cs">City & State: </label>
+                    <input id="cs" type="text" formControlName="cs" />
+                    <label for="pincode">Pincode: </label>
+                    <input id="pincode" type="text" formControlName="pincode" />
+                    <label for="mob">Mobile Phone: </label>
+                    <input id="mob" type="tele" formControlName="mob" />
+                </div>
+                <p> * Please let us know the particulars of dues, if any, to be collected from the Employee</p> 
+                <p>* This form is to be returned to Admin, duly completed . 
+                </p>
+                <div class="form-1">
+                    <label for="depts">Departments: </label>
+                    <select id="depts" formControlName="depts">
+                        <option value="None"> None </option>
+                        <option value=" ">Respective Functional Head
+                            / Branch Head </option>
+                        <option value=" ">Accounts </option>
+                        <option value=" ">HR </option>
+                        <option value=" ">For Full & Final Settlement </option>
+                        <option value=" "> Admin  </option>
+                      </select>
+                    <label for="particular">Particulars: </label>
+                    <select id="particular" formControlName="particular">
+                        <option value="None"> None </option>
+                        <!-- <option><p> Please confirm that all official
+                            Records, Company property etc have
+                            been returned: </p></option> -->
+                        <option value=" ">Manua ls/ Files/ Diary</option>
+                        <option value=" ">Official Documents  </option>
+                        <option value=" ">Visiting Cards </option>
+                        <option value=" ">I - Card </option>
+                        <option value=" "> Laptop  </option>
+                        <option value=" ">Sim card </option>
+                        <option value=" "> Diary  </option>
+                      </select>
+                </div>
+                <p>I confirm that there are no other assets or property of the company in my possession. 
+                </p>
+                <div class="form-1">
+                    <label>Date: </label>
+                    <label> Employee Signature </label>
+                </div>
+                <hr>
+                <h5>Exit Interview </h5>
+                <div class="form-1">
+                    <label for="emp_name">Employee Name: </label>
+                    <input id="emp_name" type="text" formControlName="emp_name" />
+                    <label for="emp_no"> Employee Number: </label>
+                    <input id="emp_no" type="text" formControlName="emp_no" />
+                </div>
+                <div class="form-1">
+                    <label for="grade">Grade: </label>
+                    <input id="grade" type="text" formControlName="grade" />
+                    <label for="dept1"> Department: </label>
+                    <input id="dept1" type="text" formControlName="dept1" />
+                </div>
+                <div class="form-1">
+                    <label for="reporting_manager">Reporting Manager (Joining): </label>
+                    <input id="reporting_manager" type="text" formControlName="reporting_manager" />
+                    <label for="current_manager"> Reporting Manager (Current):  </label>
+                    <input id="current_manager" type="text" formControlName="current_manager" />
+                </div>
+                <div class="form-1">
+                    <label for="interviewer">Name Of Interviewer: </label>
+                    <input id="interviewer" type="text" formControlName="interviewer" />
+                    <label for="location"> Location:  </label>
+                    <input id="location" type="text" formControlName="location" />
+                </div>
+                <div class="form-1">
+                    <label for="designation1">Designation (Joining): </label>
+                    <input id="designation1" type="text" formControlName="designation1" />
+                    <label for="exit_interview"> Date of Exit Interview :   </label>
+                    <input id="exit_interview" type="text" formControlName="exit_interview" />
+                </div>
+                <div class="form-1">
+                    <label for="doj1">Date of Joining </label>
+                    <input id="doj1" type="text" formControlName="doj1" />
+                    <label for="current_designation">Designation (Current):  </label>
+                    <input id="current_designation" type="text" formControlName="current_designation" />
+                </div>
+                <div class="form-1">
+                    <label for="year_service">Years of Service with EFL : </label>
+                    <input id="year_service" type="text" formControlName="year_service" />
+                    <label for="lworking_day">Last Working Day :  </label>
+                    <input id="lworking_day" type="text" formControlName="lworking_day" />
+                </div>
+                <div class="form-1">
+                    <label for="reasonfor_leaving">PLEASE INDICATE THE REASONS YOU ARE LEAVING : </label>
+                    <select id="reasonfor_leaving" formControlName="reasonfor_leaving">
+                        <option value="None"> None </option>
+                        <option value=" ">Higher salary? </option>
+                        <option value=" ">Better non-salary benefits?  </option>
+                        <option value=" ">Career Opportunities? </option>
+                        <option value=" ">Flexible work practices? </option>
+                        <option value=" "> More interesting work?   </option>
+                        <option value=" ">Better fit with workplace culture and values? </option>
+                        <option value=" "> More convenient work location? </option>
+                      </select>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment:</label>
+                    <input id="cmd" type="text" formControlName="cmd" />
+                </div>
+                <h5>PLEASE COMMENT ON HOW SATISFIED YOU WERE WITH EACH OF THE FOLLOWING </h5>
+                <br>
+                <h5> Office Environment </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Workng Hours</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Availability of equipment and aids</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <h5> JOB ROLE  </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Opportunities for advancement & development</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Workload</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Nature and content of work</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Performance Review and Development Process</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Your ability to provide input into issues that affect your work</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5>REMUNERATION AND BENEFITS  </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Present remunerat,on and benefits in relation to respons1b1lit,es </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Other benefits such as 1nccn1,vcs etc</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5>INTERPERSONAL RELATIONSHIPS </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Relationship with immediate supervisor/manager </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Relationship withh staff in your Branch/Dept</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Relationship withh staff in other Branch/Hod</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5> INTERNAL COMMUNICATION </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Cooperation within the department</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Cooperation with other departments/ HOD </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Communication in your department/Branch</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Communication with in the company as a whole</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Communication between you and your manager</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Moral in your Dept/Branch</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5> TRAINING AND DEVELOPMENT </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Induction </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Initial training and development </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Knowledge of work you were required to do </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Access to additional training programs</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5> IMMEDIATE SENIOR  </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Provide recognition on the Job</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Developed cooperation with in Dept.  </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Effectively resolved problems and complaints</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Gives guidance where ever required </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Encouraged and listened to suggestions</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Competence of your immediate senior </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5> MANAGEMENT </h5>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Communication of company direction and policy </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Feedback on your performance  </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label> Communication of decisions and other issues affecting you  </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <div class="form-check form-check-inline">
+                        <label>Overall Company Culture </label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Dis-satisfied</label>
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">Highly-Dissatisfied</label>
+                    </div>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" />
+                </div>
+                <h5> YOUR NEW JOB </h5>
+                <div class="form-1">
+                    <label>Are you intending to continue working immediately? </label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> Yes
+                    <label class="form-check-label" for="radio1"></label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> No
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-1">
+                    <label>Does your new position offer higher remuneration? </label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> Yes
+                    <label class="form-check-label" for="radio1"></label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> No
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-1">
+                    <label>Does your new position offer greater career responsibility? </label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> Yes
+                    <label class="form-check-label" for="radio1"></label>
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> No
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-1">
+                    <label for="cmd">Comment</label>
+                    <input type="text" class="text-line" ngModel maxlength="50"/>
+                </div>
+                <p> 1. Have you ever approached HR department with your problems? If yes, when and for what support</p>
+                
+                
+                <h4>Personal Contact Details :</h4>
+                <div class="form-1">
+                    <label for="mon">Mobile Number: </label>
+                    <input id="mon" type="text" formControlName="mon" />
+                </div>
+                <div class="form-1">
+                    <label for="M_id">Mail Id: </label>
+                    <input id="M_id" type="text" formControlName="M_id" />
+                </div>
+                <h6>Thank you for completing this information. Your responses will be treated with total confidence. </h6>
+                <p>Signature of the Interviewee: ___________________</p><br>
+                <p>Signature of the Interviewer/ HR : ___________________</p>
+
+
+                <div class="btn">
+                    <button type="button" (click)="Ok()" class="primary">Submit Feedback</button>
+                    <button type="button" (click)="download_invoice('user')" class="primary">Download</button>
+                </div>
+
+
+              </div> 
+            </form>
+        </div>
+    </div>
+</div>
